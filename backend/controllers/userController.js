@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 const createToken = (id) => {
-  const secret = process.env.JWT_SECRET || "grocery_store_mern_default_jwt_secret_key";
+  const secret = process.env.JWT_SECRET;
   return jwt.sign({ id }, secret, { expiresIn: "7d" });
 };
 

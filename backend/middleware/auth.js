@@ -12,7 +12,7 @@ const authUser = async (req, res, next) => {
       token = token.slice(7).trim();
     }
 
-    const secret = process.env.JWT_SECRET || "grocery_store_mern_default_jwt_secret_key";
+    const secret = process.env.JWT_SECRET;
     const decoded = jwt.verify(token, secret);
     req.userId = decoded.id;
     next();
