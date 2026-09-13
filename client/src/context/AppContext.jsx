@@ -8,7 +8,7 @@ export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
   const currency = import.meta.env.VITE_CURRENCY || "$";
-  const backendUrl = "http://localhost:5000";
+  const backendUrl = "https://grocery-store-mern-q100.onrender.com";
   const navigate = useNavigate();
 
   const [user, setUser] = useState(null);
